@@ -4,30 +4,30 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
-import br.edu.infnet.appmedicamento.model.domain.Medicamento;
+import br.edu.infnet.appmedicamento.model.domain.HigienePessoal;
 
 @Component
 public class HigienePessoalTeste implements ApplicationRunner {
 	
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		Medicamento m1 = new Medicamento();		
-		m1.composicao = "PANTOPRAZOL SÓDICO SESQUIIDRATADO (40MG)";
-		m1.indicacao = "Alívio dos sintomas por problemas no estômago";
-		m1.rms = "1.8326.0187.009-8";
-		System.out.println("Medicamento - " + m1);
+		HigienePessoal h1 = new HigienePessoal();		
+		h1.genero = "Unisex";
+		h1.perfil = "Infantil";
+		h1.precaucoes = "Lavar as mãos antes e após o procedimento.";
+		System.out.println("Medicamento - " + h1);
 		
-		Medicamento m2 = new Medicamento();
-		m2.composicao = "LOSARTANA POTÁSSICA (50MG)";
-		m2.indicacao = "Tratamento da hipertensão arterial.";
-		m2.rms = "1.5584.0428.015-9";
-		System.out.println("Medicamento - " + m2);
+		HigienePessoal h2 = new HigienePessoal();
+		h2.genero = "Masculino";
+		h2.perfil = "Adulto";
+		h2.precaucoes = "Realize o Teste de sensibilidade sempre antes da utilização do produto.";
+		System.out.println("Medicamento - " + h2);
 		
-		Medicamento m3 = new Medicamento();
-		m3.composicao = "PREDNISONA (20MG)";
-		m3.indicacao = "Tratamento de doenças endócrinas";
-		m3.rms = "1.0181.0578.005-5";
-		System.out.println("Medicamento - " + m3);
+		HigienePessoal h3 = new HigienePessoal();
+		h3.genero = "Feminino";
+		h3.perfil = "Adulto";
+		h3.precaucoes = "Este medicamento pode ser utilizado durante a gravidez desde que sob orientação médica ou odontológica.";
+		System.out.println("Medicamento - " + h3);
 		
 	}
 }
