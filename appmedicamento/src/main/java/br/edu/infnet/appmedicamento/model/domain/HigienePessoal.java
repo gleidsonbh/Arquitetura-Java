@@ -2,12 +2,36 @@ package br.edu.infnet.appmedicamento.model.domain;
 
 public class HigienePessoal extends Produto {
 
-	public String precaucoes;
-	public String perfil;
-	public String genero;
+	private String precaucoes;
+	private String perfil;
+	private String genero;
+	
+	public String getPrecaucoes() {
+		return precaucoes;
+	}
+	
+	public void setPrecaucoes(String precaucoes) {
+		this.precaucoes = precaucoes;
+	}
+	
+	public String getPerfil() {
+		return perfil;
+	}
+	
+	public void setPerfil(String perfil) {
+		this.perfil = perfil;
+	}	
+	
+	public String getGenero() {
+		return genero;
+	}
+	
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}	
 	
 	@Override
 	public String toString() {
-		return precaucoes + ";" + perfil + ";" + genero;
+		return super.toString() + ";" + getPrecaucoes() + ";" + getPerfil() + ";" + getGenero();
 	}	
 }
