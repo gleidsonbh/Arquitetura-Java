@@ -13,6 +13,7 @@
 		<table class="table table-striped">
 		    <thead>
 		      <tr>
+		      	<th>ID</th>
 		        <th>Código</th>
 		        <th>Frete Grátis</th>
 		        <th>Tipo de Entrega</th>
@@ -21,6 +22,7 @@
 		    <tbody>
 		      <c:forEach var="p" items="${listagem}">
 			      <tr>
+			      	<td>${p.id}</td>
 			        <td>${p.codigo}</td>
 			        <td>${p.freteGratis}</td>
 			        <td>${p.tipoEntrega}</td>

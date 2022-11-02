@@ -1,10 +1,19 @@
 package br.edu.infnet.appmedicamento.model.domain;
 
 public class Cliente {
+	private Integer id;
 	private String nome;
 	private int idade;
 	private String cidade;	
 	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	public String getNome() {
 		return nome;
 	}

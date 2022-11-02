@@ -1,11 +1,19 @@
 package br.edu.infnet.appmedicamento.model.domain;
 
 public abstract class Produto {
+	private Integer id;
 	private String descricao;
 	private float valor;
-	private String fabricante;
+	private String fabricante;	
 	
-	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	public String getDescricao() {
 		return descricao;
 	}
@@ -32,6 +40,6 @@ public abstract class Produto {
 	
 	@Override
 	public String toString() {
-		return getDescricao() + ";" + getValor() + ";" + getFabricante();
+		return getId() + ";" + getDescricao() + ";" + getValor() + ";" + getFabricante();
 	}
 }
