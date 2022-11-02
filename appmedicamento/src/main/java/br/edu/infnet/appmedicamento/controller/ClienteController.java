@@ -7,6 +7,7 @@ import java.util.Map;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import br.edu.infnet.appmedicamento.model.domain.Cliente;
 
@@ -24,6 +25,10 @@ public class ClienteController {
 		mapa.put(cliente.getId(), cliente);
 	}
 	
+	public static void excluir(Integer id) {
+		mapa.remove(id);
+	}
+	
 	public static Collection<Cliente> obterLista() {
 		return mapa.values();
 	}	
@@ -35,4 +40,10 @@ public class ClienteController {
 		
 		return "cliente/lista";
 	}
+	
+	@GetMapping(value = "/cliente/{id}/excluir")
+	public String exclusao(@PathVariable Integer id) {
+		excluir(id);
+		return "redirect:/cliente/lista";
+	}	
 }

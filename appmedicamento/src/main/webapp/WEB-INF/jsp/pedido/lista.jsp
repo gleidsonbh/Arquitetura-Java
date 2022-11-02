@@ -17,6 +17,7 @@
 		        <th>Código</th>
 		        <th>Frete Grátis</th>
 		        <th>Tipo de Entrega</th>
+		        <th></th>
 		      </tr>
 		    </thead>
 		    <tbody>
@@ -26,6 +27,7 @@
 			        <td>${p.codigo}</td>
 			        <td>${p.freteGratis}</td>
 			        <td>${p.tipoEntrega}</td>
+			        <td><a class="btn btn-danger" href="/pedido/${p.id}/excluir">Excluir</a></td>
 			      </tr>
 		      </c:forEach>
 		    </tbody>

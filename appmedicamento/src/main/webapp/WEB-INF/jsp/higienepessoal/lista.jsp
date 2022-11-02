@@ -21,18 +21,20 @@
 		        <th>Precauções</th>
 		        <th>Perfil</th>
 		        <th>Gênero</th>
+		        <th></th>
 		      </tr>
 		    </thead>
 		    <tbody>
-		      <c:forEach var="m" items="${listagem}">
+		      <c:forEach var="h" items="${listagem}">
 			      <tr>
-			        <td>${m.id}</td>
-			        <td>${m.descricao}</td>
-			        <td>${m.valor}</td>
-			        <td>${m.fabricante}</td>
-			        <td>${m.precaucoes}</td>
-			        <td>${m.perfil}</td>
-			        <td>${m.genero}</td>
+			        <td>${h.id}</td>
+			        <td>${h.descricao}</td>
+			        <td>${h.valor}</td>
+			        <td>${h.fabricante}</td>
+			        <td>${h.precaucoes}</td>
+			        <td>${h.perfil}</td>
+			        <td>${h.genero}</td>
+			        <td><a class="btn btn-danger" href="/higienepessoal/${h.id}/excluir">Excluir</a></td>
 			      </tr>
 		      </c:forEach>
 		    </tbody>

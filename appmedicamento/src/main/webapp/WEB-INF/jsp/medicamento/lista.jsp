@@ -21,6 +21,7 @@
 		        <th>Indicação</th>
 		        <th>Composição</th>
 		        <th>RMS</th>
+		        <th><th>
 		      </tr>
 		    </thead>
 		    <tbody>
@@ -33,6 +34,7 @@
 			        <td>${m.indicacao}</td>
 			        <td>${m.composicao}</td>
 			        <td>${m.rms}</td>
+			        <td><a class="btn btn-danger" href="/medicamento/${m.id}/excluir">Excluir</a></td>
 			      </tr>
 		      </c:forEach>
 		    </tbody>

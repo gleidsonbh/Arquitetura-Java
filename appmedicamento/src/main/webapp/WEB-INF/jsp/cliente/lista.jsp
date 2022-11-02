@@ -18,6 +18,7 @@
 		        <th>Nome</th>
 		        <th>Idade</th>
 		        <th>Cidade</th>
+		        <th></th>
 		      </tr>
 		    </thead>
 		    <tbody>
@@ -27,6 +28,7 @@
 			        <td>${cl.nome}</td>
 			        <td>${cl.idade}</td>
 			        <td>${cl.cidade}</td>
+			        <td><a class="btn btn-danger" href="/cliente/${cl.id}/excluir">Excluir</a></td>
 			      </tr>
 		      </c:forEach>
 		    </tbody>

@@ -21,18 +21,20 @@
 		        <th>Modo de usar</th>
 		        <th>Avaliação</th>
 		        <th>Categoria</th>
+		        <th></th>
 		      </tr>
 		    </thead>
 		    <tbody>
-		      <c:forEach var="m" items="${listagem}">
+		      <c:forEach var="d" items="${listagem}">
 			      <tr>
-			        <td>${m.id}</td>
-			        <td>${m.descricao}</td>
-			        <td>${m.valor}</td>
-			        <td>${m.fabricante}</td>
-			        <td>${m.modoDeUsar}</td>
-			        <td>${m.avaliacao}</td>
-			        <td>${m.categoria}</td>
+			        <td>${d.id}</td>
+			        <td>${d.descricao}</td>
+			        <td>${d.valor}</td>
+			        <td>${d.fabricante}</td>
+			        <td>${d.modoDeUsar}</td>
+			        <td>${d.avaliacao}</td>
+			        <td>${d.categoria}</td>
+			        <td><a class="btn btn-danger" href="/dermocosmetico/${d.id}/excluir">Excluir</a></td>
 			      </tr>
 		      </c:forEach>
 		    </tbody>

@@ -14,7 +14,7 @@ public class ProdutoTeste implements ApplicationRunner {
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		
+		System.out.println("Cadastro de produto");
 		Medicamento m1 = new Medicamento();
 		m1.setDescricao("Pantoprazol 40mg Medley Genérico com 42 Comprimidos Revestidos");
 		m1.setFabricante("Medley");

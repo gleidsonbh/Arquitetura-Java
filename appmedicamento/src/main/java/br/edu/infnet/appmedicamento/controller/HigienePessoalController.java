@@ -7,6 +7,7 @@ import java.util.Map;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import br.edu.infnet.appmedicamento.model.domain.HigienePessoal;
 
@@ -23,6 +24,10 @@ public class HigienePessoalController {
 		mapa.put(higienePessoal.getId(), higienePessoal);
 	}
 	
+	public static void excluir(Integer id) {
+		mapa.remove(id);
+	}
+	
 	public static Collection<HigienePessoal> obterLista() {
 		return mapa.values();
 	}	
@@ -33,5 +38,11 @@ public class HigienePessoalController {
 		model.addAttribute("listagem", obterLista());
 		
 		return "higienepessoal/lista";
+	}
+	
+	@GetMapping(value = "/higienepessoal/{id}/excluir")
+	public String exclusao(@PathVariable Integer id) {
+		excluir(id);
+		return "redirect:/higienepessoal/lista";
 	}
 }

@@ -18,6 +18,7 @@
 		        <th>Descrição</th>
 		        <th>Valor</th>
 		        <th>Fabricante</th>
+		        <th></th>
 		      </tr>
 		    </thead>
 		    <tbody>
@@ -27,6 +28,7 @@
 			        <td>${p.descricao}</td>
 			        <td>${p.valor}</td>
 			        <td>${p.fabricante}</td>
+			        <td><a class="btn btn-danger" href="/produto/${p.id}/excluir">Excluir</a></td>
 			      </tr>
 		      </c:forEach>
 		    </tbody>
