@@ -8,7 +8,8 @@
 </head>
 <body>
 	<div class="container mt-3">
-		<h3>Medicamentos</h3>
+		<h3>Medicamentos: ${listagem}</h3>
+		<h3>${listagem.size()}</h3>
 	</div>
 </body>
 </html>
