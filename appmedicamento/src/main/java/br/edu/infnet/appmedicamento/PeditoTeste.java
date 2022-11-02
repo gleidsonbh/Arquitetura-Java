@@ -7,6 +7,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
+import br.edu.infnet.appmedicamento.controller.PedidoController;
 import br.edu.infnet.appmedicamento.model.domain.Cliente;
 import br.edu.infnet.appmedicamento.model.domain.Dermocosmetico;
 import br.edu.infnet.appmedicamento.model.domain.HigienePessoal;
@@ -63,6 +64,7 @@ public class PeditoTeste  implements ApplicationRunner{
 		p1.setTipoEntrega("Motoboy");
 		p1.setProdutos(produtosPrimeiroPedido);
 		System.out.println("Pedido - " + p1);
+		PedidoController.incluir(p1);
 		
 		Pedido p2 = new Pedido();
 		p2.setCodigo(456);
@@ -71,6 +73,7 @@ public class PeditoTeste  implements ApplicationRunner{
 		p2.setCliente(c1);
 		p2.setProdutos(produtosDemaisPedido);
 		System.out.println("Pedido - " + p2);
+		PedidoController.incluir(p2);
 		
 		Cliente c2 = new Cliente();
 		c2.setNome("Cliente 2");
@@ -83,7 +86,7 @@ public class PeditoTeste  implements ApplicationRunner{
 		p3.setCliente(c2);
 		p3.setProdutos(produtosDemaisPedido);
 		System.out.println("Pedido - " + p3);
-		
+		PedidoController.incluir(p3);
 	}
 
 }

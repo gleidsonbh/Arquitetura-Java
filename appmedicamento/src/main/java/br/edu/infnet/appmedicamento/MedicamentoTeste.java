@@ -4,6 +4,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
+import br.edu.infnet.appmedicamento.controller.MedicamentoController;
 import br.edu.infnet.appmedicamento.model.domain.Medicamento;
 
 @Component
@@ -19,6 +20,7 @@ public class MedicamentoTeste implements ApplicationRunner {
 		m1.setIndicacao("Alívio dos sintomas por problemas no estômago");
 		m1.setRms("1.8326.0187.009-8");
 		System.out.println("Medicamento - " + m1);
+		MedicamentoController.incluir(m1);
 		
 		Medicamento m2 = new Medicamento();
 		m2.setDescricao("Losartana Potássica 50mg EMS Genérico com 30 Comprimidos");
@@ -28,6 +30,7 @@ public class MedicamentoTeste implements ApplicationRunner {
 		m2.setIndicacao("Tratamento da hipertensão arterial.");
 		m2.setRms("1.5584.0428.015-9");
 		System.out.println("Medicamento - " + m2);
+		MedicamentoController.incluir(m2);
 		
 		Medicamento m3 = new Medicamento();
 		m3.setDescricao("Prednisona 20mg Medley Genérico com 10 Comprimidos");
@@ -37,6 +40,7 @@ public class MedicamentoTeste implements ApplicationRunner {
 		m3.setIndicacao("Tratamento de doenças endócrinas");
 		m3.setRms("1.0181.0578.005-5");
 		System.out.println("Medicamento - " + m3);
+		MedicamentoController.incluir(m3);
 		
 	}
 
