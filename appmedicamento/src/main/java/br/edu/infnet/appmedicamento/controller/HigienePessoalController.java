@@ -1,48 +1,29 @@
 package br.edu.infnet.appmedicamento.controller;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-
-import br.edu.infnet.appmedicamento.model.domain.HigienePessoal;
+import br.edu.infnet.appmedicamento.model.service.HigienePessoalService;
 
 @Controller
 public class HigienePessoalController {
 
-	private static Map<Integer, HigienePessoal> mapa = new HashMap<Integer,HigienePessoal>();
-	
-	private static Integer id = 1;	
-
-	
-	public static void incluir(HigienePessoal higienePessoal) {
-		higienePessoal.setId(id++);
-		mapa.put(higienePessoal.getId(), higienePessoal);
-	}
-	
-	public static void excluir(Integer id) {
-		mapa.remove(id);
-	}
-	
-	public static Collection<HigienePessoal> obterLista() {
-		return mapa.values();
-	}	
+	@Autowired
+	private HigienePessoalService higienePessoalService;
 	
 	@GetMapping(value = "/higienepessoal/lista")
 	public String telaLista(Model model) {
 				
-		model.addAttribute("listagem", obterLista());
+		model.addAttribute("listagem", higienePessoalService.obterLista());
 		
 		return "higienepessoal/lista";
 	}
 	
 	@GetMapping(value = "/higienepessoal/{id}/excluir")
 	public String exclusao(@PathVariable Integer id) {
-		excluir(id);
+		higienePessoalService.excluir(id);
 		return "redirect:/higienepessoal/lista";
 	}
 }

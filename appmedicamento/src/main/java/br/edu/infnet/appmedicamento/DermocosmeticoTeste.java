@@ -1,14 +1,18 @@
 package br.edu.infnet.appmedicamento;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
-
-import br.edu.infnet.appmedicamento.controller.DermocosmeticoController;
 import br.edu.infnet.appmedicamento.model.domain.Dermocosmetico;
+import br.edu.infnet.appmedicamento.model.service.DermocosmeticoService;
 
 @Component
 public class DermocosmeticoTeste implements ApplicationRunner {
+	
+	@Autowired
+	private DermocosmeticoService dermocosmeticoService;
+	
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		Dermocosmetico d1 = new Dermocosmetico();		
@@ -19,7 +23,7 @@ public class DermocosmeticoTeste implements ApplicationRunner {
 		d1.setCategoria("Limpeza Facial");
 		d1.setModoDeUsar("Aplique sobre o rosto úmido uma quantidade equivalente a uma moeda de 1 real, massageando suavemente");
 		System.out.println("Dermocosmético - " + d1);
-		DermocosmeticoController.incluir(d1);
+		dermocosmeticoService.incluir(d1);
 		
 		Dermocosmetico d2 = new Dermocosmetico();
 		d2.setDescricao("Kit Hidratante Corporal Fisiogel A.I. Ação Calmante 2 unidades 400ml");
@@ -29,7 +33,7 @@ public class DermocosmeticoTeste implements ApplicationRunner {
 		d2.setCategoria("Hidratante Corporal");
 		d2.setModoDeUsar("Aplique generosamente sempre que necessário, ou conforme orientação médica.");
 		System.out.println("Dermocosmético - " + d2);
-		DermocosmeticoController.incluir(d2);
+		dermocosmeticoService.incluir(d2);
 		
 		Dermocosmetico d3 = new Dermocosmetico();
 		d3.setDescricao("Hidratante para os Pés Isdin Ureadin Podos 75ml");
@@ -39,6 +43,6 @@ public class DermocosmeticoTeste implements ApplicationRunner {
 		d3.setCategoria("Mãos e Pés");
 		d3.setModoDeUsar("Aplicar uma ou duas vezes ao dia sobre a pele seca.");
 		System.out.println("Dermocosmético - " + d3);
-		DermocosmeticoController.incluir(d3);
+		dermocosmeticoService.incluir(d3);
 	}
 }
