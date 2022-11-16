@@ -3,6 +3,7 @@ package br.edu.infnet.appmedicamento.model.domain;
 import java.util.List;
 
 public class Pedido {
+
 	private Integer id;
 	private Integer codigo;
 	private boolean freteGratis;

@@ -1,15 +1,16 @@
-package br.edu.infnet.appmedicamento.controller;
+/*package br.edu.infnet.appmedicamento.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import br.edu.infnet.appmedicamento.model.service.PedidoService;
+//import org.springframework.ui.Model;
+//import org.springframework.web.bind.annotation.GetMapping;
+//import org.springframework.web.bind.annotation.PathVariable;
+//import br.edu.infnet.appmedicamento.model.service.PedidoService;
 
 @Controller
 public class PedidoController {
 
+	
 	@Autowired
 	private PedidoService pedidoService;
 	
@@ -25,5 +26,7 @@ public class PedidoController {
 	public String exclusao(@PathVariable Integer id) {
 		pedidoService.excluir(id);
 		return "redirect:/pedido/lista";
-	}	
+	}
+		
 }
+*/

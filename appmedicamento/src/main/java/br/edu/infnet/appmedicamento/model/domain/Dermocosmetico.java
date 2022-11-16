@@ -1,5 +1,10 @@
 package br.edu.infnet.appmedicamento.model.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tdermocosmetico")
 public class Dermocosmetico extends Produto {
 	private String modoDeUsar;
 	private float avaliacao;

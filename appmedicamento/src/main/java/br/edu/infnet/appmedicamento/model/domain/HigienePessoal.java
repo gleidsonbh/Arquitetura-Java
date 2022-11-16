@@ -1,5 +1,10 @@
 package br.edu.infnet.appmedicamento.model.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "thigienepessoal")
 public class HigienePessoal extends Produto {
 
 	private String precaucoes;

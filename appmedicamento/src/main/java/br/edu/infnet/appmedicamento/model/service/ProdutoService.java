@@ -1,29 +1,29 @@
 package br.edu.infnet.appmedicamento.model.service;
 
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.edu.infnet.appmedicamento.model.domain.Produto;
+import br.edu.infnet.appmedicamento.model.repository.ProdutoRepository;
 
 @Service
 public class ProdutoService {
-	private static Map<Integer, Produto> mapa = new HashMap<Integer,Produto>();	
-	private static Integer id = 1;	
+
+	@Autowired
+	private ProdutoRepository produtoRepository;
 	
 	public void incluir(Produto produto) {
-		produto.setId(id++);
-		mapa.put(produto.getId(), produto);
+		produtoRepository.save(produto);
 	}
 	
 	public void excluir(Integer id) {
-		mapa.remove(id);
+		produtoRepository.deleteById(id);
 	}	
 	
 	public Collection<Produto> obterLista() {
-		return mapa.values();
+		return (Collection<Produto>) produtoRepository.findAll();
 	}
 
 }

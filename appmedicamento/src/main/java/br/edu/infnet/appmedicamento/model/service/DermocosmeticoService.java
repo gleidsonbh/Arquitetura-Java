@@ -1,30 +1,28 @@
 package br.edu.infnet.appmedicamento.model.service;
 
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.edu.infnet.appmedicamento.model.domain.Dermocosmetico;
+import br.edu.infnet.appmedicamento.model.repository.DermocosmeticoRepository;
 
 @Service
 public class DermocosmeticoService {
 
-	private static Map<Integer, Dermocosmetico> mapa = new HashMap<Integer,Dermocosmetico>();	
-	private static Integer id = 1;	
-
+	@Autowired
+	private DermocosmeticoRepository dermocosmeticoRepository;
 	
 	public void incluir(Dermocosmetico dermocosmetico) {
-		dermocosmetico.setId(id++);
-		mapa.put(dermocosmetico.getId(), dermocosmetico);
+		dermocosmeticoRepository.save(dermocosmetico);
 	}
 	
 	public void excluir(Integer id) {
-		mapa.remove(id);
+		dermocosmeticoRepository.deleteById(id);
 	}
 	
 	public Collection<Dermocosmetico> obterLista() {
-		return mapa.values();
+		return (Collection<Dermocosmetico>) dermocosmeticoRepository.findAll();
 	}	
 }

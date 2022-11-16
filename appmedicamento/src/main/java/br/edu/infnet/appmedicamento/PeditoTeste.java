@@ -1,4 +1,4 @@
-package br.edu.infnet.appmedicamento;
+/*package br.edu.infnet.appmedicamento;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,13 +13,13 @@ import br.edu.infnet.appmedicamento.model.domain.HigienePessoal;
 import br.edu.infnet.appmedicamento.model.domain.Medicamento;
 import br.edu.infnet.appmedicamento.model.domain.Pedido;
 import br.edu.infnet.appmedicamento.model.domain.Produto;
-import br.edu.infnet.appmedicamento.model.service.PedidoService;
+//import br.edu.infnet.appmedicamento.model.service.PedidoService;
 
 @Component
 public class PeditoTeste  implements ApplicationRunner{
 
 	@Autowired
-	private PedidoService pedidoService;
+	//private PedidoService pedidoService;
 	
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
@@ -67,7 +67,7 @@ public class PeditoTeste  implements ApplicationRunner{
 		p1.setTipoEntrega("Motoboy");
 		p1.setProdutos(produtosPrimeiroPedido);
 		System.out.println("Pedido - " + p1);
-		pedidoService.incluir(p1);
+		//pedidoService.incluir(p1);
 		
 		Pedido p2 = new Pedido();
 		p2.setCodigo(456);
@@ -76,7 +76,7 @@ public class PeditoTeste  implements ApplicationRunner{
 		p2.setCliente(c1);
 		p2.setProdutos(produtosDemaisPedido);
 		System.out.println("Pedido - " + p2);
-		pedidoService.incluir(p2);
+		//pedidoService.incluir(p2);
 		
 		Cliente c2 = new Cliente();
 		c2.setNome("Cliente 2");
@@ -89,7 +89,8 @@ public class PeditoTeste  implements ApplicationRunner{
 		p3.setCliente(c2);
 		p3.setProdutos(produtosDemaisPedido);
 		System.out.println("Pedido - " + p3);
-		pedidoService.incluir(p3);
+		//pedidoService.incluir(p3);
 	}
 
 }
+*/
