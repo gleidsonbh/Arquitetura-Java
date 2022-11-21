@@ -3,10 +3,12 @@ package br.edu.infnet.appmedicamento;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import br.edu.infnet.appmedicamento.model.domain.Medicamento;
 import br.edu.infnet.appmedicamento.model.service.MedicamentoService;
 
+@Order(5)
 @Component
 public class MedicamentoTeste implements ApplicationRunner {
 

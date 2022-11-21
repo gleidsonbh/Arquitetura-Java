@@ -1,14 +1,12 @@
-/*
 package br.edu.infnet.appmedicamento.model.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import br.edu.infnet.appmedicamento.model.domain.Pedido;
-
+import br.edu.infnet.appmedicamento.model.domain.Usuario;
 
 @Repository
-public interface PedidoRepository extends CrudRepository<Pedido, Integer> {
+public interface UsuarioRepository extends CrudRepository<Usuario, Integer> {
 
+	Usuario findByEmail(String email);
 }
-*/

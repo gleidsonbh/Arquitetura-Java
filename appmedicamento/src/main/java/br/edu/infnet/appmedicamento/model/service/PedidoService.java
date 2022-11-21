@@ -1,8 +1,8 @@
-/*package br.edu.infnet.appmedicamento.model.service;
+/* package br.edu.infnet.appmedicamento.model.service;
 
-//import java.util.Collection;
+import java.util.Collection;
 
-//import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.edu.infnet.appmedicamento.model.domain.Pedido;

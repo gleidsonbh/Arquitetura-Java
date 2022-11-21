@@ -1,6 +1,8 @@
 package br.edu.infnet.appmedicamento.model.domain;
 
-import java.util.List;
+//import java.util.List;
+
+//import javax.persistence.Transient;
 
 public class Pedido {
 
@@ -8,8 +10,10 @@ public class Pedido {
 	private Integer codigo;
 	private boolean freteGratis;
 	private String tipoEntrega;	
-	private Cliente cliente;
-	private List<Produto> produtos;	
+	//@Transient
+	//private Cliente cliente;
+	//@Transient
+	//private List<Produto> produtos;	
 	
 	public Integer getId() {
 		return id;
@@ -27,22 +31,22 @@ public class Pedido {
 		return codigo;
 	}
 
-	public List<Produto> getProdutos() {
-		return produtos;
-	}
+	//public List<Produto> getProdutos() {
+//		return produtos;
+//	}
 
-	public void setProdutos(List<Produto> produtos) {
-		this.produtos = produtos;
-	}
+//	public void setProdutos(List<Produto> produtos) {
+		//this.produtos = produtos;
+	//}
 
 	public Pedido() {
 		this.setFreteGratis(false);
 	}
 	
-	public Pedido(Cliente cliente) {
-		this();
-		this.cliente = cliente;
-	}
+	//public Pedido(Cliente cliente) {
+//		this();
+		//this.cliente = cliente;
+//	}
 
 	public boolean isFreteGratis() {
 		return freteGratis;
@@ -60,16 +64,16 @@ public class Pedido {
 		this.tipoEntrega = tipoEntrega;
 	}	
 	
-	public Cliente getCliente() {
-		return cliente;
-	}
+	//public Cliente getCliente() {
+//		return cliente;
+//	}
 
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
-	}
+//	public void setCliente(Cliente cliente) {
+		//this.cliente = cliente;
+	//}
 
-	@Override
-	public String toString() {
-		return codigo + ";" + freteGratis + ";" + tipoEntrega + ";" + cliente + ";" + produtos.size();
-	}
+	//@Override
+	//public String toString() {
+//		return codigo + ";" + freteGratis + ";" + tipoEntrega + ";" + cliente + ";" + produtos.size();
+//	}
 }
