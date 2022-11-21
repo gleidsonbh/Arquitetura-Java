@@ -9,4 +9,5 @@ import br.edu.infnet.appmedicamento.model.domain.Dermocosmetico;
 @Repository
 public interface DermocosmeticoRepository extends CrudRepository<Dermocosmetico, Integer> {
 
+	
 }
